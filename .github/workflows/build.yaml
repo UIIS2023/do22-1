@@ -20,8 +20,8 @@ jobs:
           distribution: 'adopt'
       - name: Compile Java project
         run: |
-          mkdir bin
-          javac -d bin $(find .DizajnerskiObrasci/src -name "*.java")
+          mkdir -p DizajnerskiObrasci/bin
+          javac -d DizajnerskiObrasci/bin $(find DizajnerskiObrasci/src -name "*.java")
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
