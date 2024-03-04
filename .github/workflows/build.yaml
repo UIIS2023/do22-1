@@ -21,7 +21,7 @@ jobs:
       - name: Compile Java project
         run: |
           mkdir bin
-          javac -d bin $(find ./src -name "*.java")
+          javac -d bin $(find .DizajnerskiObrasci/src -name "*.java")
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
